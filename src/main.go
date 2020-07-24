@@ -1,20 +1,24 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"github.com/pokemon-search-v2/src/infrastructure/elasticsearch"
-	"github.com/pokemon-search-v2/src/presentation/dto"
+	"log"
+	"net/http"
+
+	"github.com/labstack/echo/v4"
+
+	"github.com/pokemon-search-v2/src/presentation/controller"
 )
 
 func main() {
-	pokemonInfo := elasticsearch.SearchByPokemonName()
-	fmt.Println(string(pokemonInfo))
-	bytes, _ := json.Marshal(&pokemonInfo)
+	e := echo.New()
 
-	var pokemonDto dto.PokemonDto
-	json.Unmarshal(bytes, &pokemonDto)
-	fmt.Println(pokemonDto.Name)
-	fmt.Println(pokemonDto.Type)
-	fmt.Println(pokemonDto.BaseStats.Speed)
+	// TODO: routingは別の場所で定義したい
+	e.GET("/health", func(context echo.Context) error {
+		return context.String(http.StatusOK, "Health is OK.")
+	})
+	e.POST("/pokemon", controller.Search())
+
+	if err := e.Start(":8081"); err != nil {
+		log.Fatalf("Failed to start server: %v", err)
+	}
 }
