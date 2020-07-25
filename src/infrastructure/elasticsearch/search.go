@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"errors"
 	"log"
 
 	"github.com/elastic/go-elasticsearch/v8"
@@ -29,7 +30,7 @@ func NewPokemonRepository() repository.IPokemonRepository {
 	return &PokemonRepository{}
 }
 
-func (repository *PokemonRepository) SearchByPokemonName() json.RawMessage {
+func (repository *PokemonRepository) SearchByPokemonName(searchWord string) (json.RawMessage, error) {
 	es, err := elasticsearch.NewDefaultClient()
 	if err != nil {
 		log.Fatalf("Error creating the client: %s", err)
@@ -50,7 +51,7 @@ func (repository *PokemonRepository) SearchByPokemonName() json.RawMessage {
 	query := map[string]interface{}{
 		"query": map[string]interface{}{
 			"match": map[string]interface{}{
-				"name": "サルノリ", // TODO: ここはLINEから受け取った文字列をセット
+				"name": searchWord,
 			},
 		},
 	}
@@ -78,10 +79,12 @@ func (repository *PokemonRepository) SearchByPokemonName() json.RawMessage {
 	log.Printf(
 		"[%s] %d hits; took: %dms",
 		res.Status(),
-		result.Hits.Total,
+		result.Hits.Total.Value,
 		result.Took,
 	)
 
-	// TODO: 検索結果がなかったとき
-	return result.Hits.Hits[0].Source
+	if result.Hits.Total.Value == 0 {
+		return json.RawMessage(""), errors.New("No search results")
+	}
+	return result.Hits.Hits[0].Source, nil
 }

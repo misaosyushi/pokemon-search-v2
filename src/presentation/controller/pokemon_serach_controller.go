@@ -1,29 +1,29 @@
 package controller
 
 import (
-	"encoding/json"
-	"fmt"
+	"github.com/pokemon-search-v2/src/infrastructure/line"
+	"github.com/pokemon-search-v2/src/presentation/dto"
 	"log"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
 
-	"github.com/pokemon-search-v2/src/infrastructure/line"
-	"github.com/pokemon-search-v2/src/presentation/dto"
 	"github.com/pokemon-search-v2/src/usecase"
 )
 
 func Search() echo.HandlerFunc {
 	return func(c echo.Context) error {
-		pokemonInfo := usecase.SearchByPokemonName()
-		fmt.Println(string(pokemonInfo))
-		bytes, _ := json.Marshal(&pokemonInfo)
+		log.Print("context ", c.Request().Body)
 
-		// TODO: 検索結果がなかったとき
-		var pokemonDto dto.PokemonDto
-		if err := json.Unmarshal(bytes, &pokemonDto); err != nil {
-			log.Fatal("Failed to parse json to DTO.")
+		var lineDto dto.LineMessageDto
+		if err := c.Bind(&lineDto); err != nil {
+			return c.String(http.StatusInternalServerError, "Server error")
+		} else if len(lineDto.Events) == 0 {
+			return c.String(http.StatusInternalServerError, "Server error")
+		} else {
+			line.ReplayMessage(&lineDto, usecase.SearchByPokemonName(lineDto.Events[0].Message.Text))
+			return c.String(http.StatusOK, "Reply line message is success")
 		}
-		return c.String(http.StatusOK, line.MakeMessage(pokemonDto))
+		return nil
 	}
 }

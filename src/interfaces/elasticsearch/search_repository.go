@@ -5,5 +5,5 @@ import (
 )
 
 type IPokemonRepository interface {
-	SearchByPokemonName() json.RawMessage
+	SearchByPokemonName(searchWord string) (json.RawMessage, error)
 }

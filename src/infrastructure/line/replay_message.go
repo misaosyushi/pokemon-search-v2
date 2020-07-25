@@ -1,25 +1,20 @@
 package line
 
 import (
-	"fmt"
-	"github.com/pokemon-search-v2/src/presentation/dto"
 	"log"
+	"os"
 
 	"github.com/line/line-bot-sdk-go/linebot"
+
+	"github.com/pokemon-search-v2/src/presentation/dto"
 )
 
-// TODO: POSTのボディから文字列を取得 -> Elasticsearchから検索
-func ReplayMessage(dto dto.PokemonDto) {
-	bot, err := linebot.New("", "")
+func ReplayMessage(dto *dto.LineMessageDto, message string) {
+	bot, err := linebot.New(os.Getenv("CHANNEL_SECRET"), os.Getenv("CHANNEL_ACCESS_TOKEN"))
 	if err != nil {
-		log.Fatal("")
+		log.Fatalf("Failed to create line client: %s", err)
 	}
-	if _, err := bot.ReplyMessage("", linebot.NewTextMessage(MakeMessage(dto))).Do(); err != nil {
-		log.Fatal("")
+	if _, err := bot.ReplyMessage(dto.Events[0].ReplyToken, linebot.NewTextMessage(message)).Do(); err != nil {
+		log.Printf("Failed to reply message: %s", err)
 	}
-}
-
-func MakeMessage(dto dto.PokemonDto) string {
-	return fmt.Sprintf("タイプ: %s\n種族値: \nHP　　　: %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s",
-		dto.Type, dto.BaseStats.Hp, dto.BaseStats.Attack, dto.BaseStats.Defense, dto.BaseStats.SpecialAttack, dto.BaseStats.SpecialDefense, dto.BaseStats.Speed)
 }
