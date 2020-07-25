@@ -1,13 +1,13 @@
 package controller
 
 import (
-	"github.com/pokemon-search-v2/src/infrastructure/line"
-	"github.com/pokemon-search-v2/src/presentation/dto"
 	"log"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/pokemon-search-v2/src/infrastructure/line"
 
+	"github.com/pokemon-search-v2/src/presentation/dto"
 	"github.com/pokemon-search-v2/src/usecase"
 )
 
@@ -24,6 +24,5 @@ func Search() echo.HandlerFunc {
 			line.ReplayMessage(&lineDto, usecase.SearchByPokemonName(lineDto.Events[0].Message.Text))
 			return c.String(http.StatusOK, "Reply line message is success")
 		}
-		return nil
 	}
 }
