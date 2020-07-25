@@ -7,6 +7,8 @@ import (
 	"log"
 
 	"github.com/elastic/go-elasticsearch/v8"
+
+	repository "github.com/pokemon-search-v2/src/interfaces/elasticsearch"
 )
 
 type result struct {
@@ -21,7 +23,13 @@ type result struct {
 	} `json:"hits"`
 }
 
-func SearchByPokemonName() json.RawMessage {
+type PokemonRepository struct{}
+
+func NewPokemonRepository() repository.IPokemonRepository {
+	return &PokemonRepository{}
+}
+
+func (repository *PokemonRepository) SearchByPokemonName() json.RawMessage {
 	es, err := elasticsearch.NewDefaultClient()
 	if err != nil {
 		log.Fatalf("Error creating the client: %s", err)
@@ -66,12 +74,14 @@ func SearchByPokemonName() json.RawMessage {
 	if err := json.NewDecoder(res.Body).Decode(&result); err != nil {
 		log.Fatalf("Error parsing the response body: %s", err)
 	}
-	// Print the response status and request duration.
+	// Print the response status, number of results, and request duration.
 	log.Printf(
-		"[%s] took: %dms",
+		"[%s] %d hits; took: %dms",
 		res.Status(),
+		result.Hits.Total,
 		result.Took,
 	)
 
+	// TODO: 検索結果がなかったとき
 	return result.Hits.Hits[0].Source
 }
