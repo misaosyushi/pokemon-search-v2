@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pokemon-search-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: pokemon-search
+          servicePort: 8081

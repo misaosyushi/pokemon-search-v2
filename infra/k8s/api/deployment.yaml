@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pokemon-search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pokemon-search
+  template:
+    metadata:
+      labels:
+        app: pokemon-search
+    spec:
+      containers:
+      - name: api
+        image: gcr.io/pokemon-search-285202/pokemon-search:latest
+        ports:
+        - containerPort: 8081
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: 8081
+            scheme: HTTP
