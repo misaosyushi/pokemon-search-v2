@@ -1,11 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: pokemon-search-ingress
 spec:
   rules:
-  - http:
-      paths:
-      - backend:
-          serviceName: pokemon-search
-          servicePort: 8081
+    - http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: pokemon-search-service
+              servicePort: 8081

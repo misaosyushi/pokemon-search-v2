@@ -12,6 +12,9 @@ import (
 func StartServer() error {
 	e := echo.New()
 
+	e.GET("/", func(context echo.Context) error {
+		return context.String(http.StatusOK, "")
+	})
 	e.GET("/health", func(context echo.Context) error {
 		return context.String(http.StatusOK, "Health is OK.")
 	})
