@@ -2,11 +2,15 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: pokemon-search-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: pokemon-search-static-ip
+    kubernetes.io/ingress.allow-http: "false"
+    ingress.gcp.kubernetes.io/pre-shared-cert: pokemon-cert
 spec:
   rules:
-    - http:
+    - host: pokemon-search.aniweb.info
+      http:
         paths:
-          - path: /*
-            backend:
+          - backend:
               serviceName: pokemon-search-service
               servicePort: 8081
