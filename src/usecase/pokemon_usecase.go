@@ -27,6 +27,6 @@ func SearchByPokemonName(searchWord string) string {
 }
 
 func makeMessage(dto dto.PokemonDto) string {
-	return fmt.Sprintf("タイプ: %s\n種族値: \nHP　　 : %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s",
+	return fmt.Sprintf("【タイプ】\n%s\n【種族値】\nHP　　  : %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s",
 		dto.Type, dto.BaseStats.Hp, dto.BaseStats.Attack, dto.BaseStats.Defense, dto.BaseStats.SpecialAttack, dto.BaseStats.SpecialDefense, dto.BaseStats.Speed)
 }

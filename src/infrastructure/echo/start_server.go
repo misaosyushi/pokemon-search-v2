@@ -18,6 +18,7 @@ func StartServer() error {
 	e.GET("/health", func(context echo.Context) error {
 		return context.String(http.StatusOK, "Health is OK.")
 	})
+	e.GET("/test", controller.Test())
 	e.POST("/pokemon", controller.Search())
 
 	if err := e.Start(":8081"); err != nil {
