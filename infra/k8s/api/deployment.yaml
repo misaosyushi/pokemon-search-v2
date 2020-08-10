@@ -14,7 +14,10 @@ spec:
     spec:
       containers:
       - name: api
-        image: gcr.io/pokemon-search-285202/pokemon-search:20200809-01
+        image: gcr.io/pokemon-search-285202/pokemon-search:20200809-05
+        env:
+        - name: ELASTICSEARCH_URL
+          value: "http://10.47.243.13:9200"
         ports:
         - containerPort: 8081
         livenessProbe:

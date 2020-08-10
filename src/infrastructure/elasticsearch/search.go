@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"log"
+	"os"
 
 	"github.com/elastic/go-elasticsearch/v8"
 
@@ -31,19 +32,13 @@ func NewPokemonRepository() repository.IPokemonRepository {
 }
 
 func (repository *PokemonRepository) SearchByPokemonName(searchWord string) (json.RawMessage, error) {
-	es, err := elasticsearch.NewDefaultClient()
+	log.Println("elasticsearch url: ", os.Getenv("ELASTICSEARCH_URL"))
+	cfg := elasticsearch.Config{
+		Addresses:            []string{os.Getenv("ELASTICSEARCH_URL")},
+	}
+	es, err := elasticsearch.NewClient(cfg)
 	if err != nil {
 		log.Fatalf("Error creating the client: %s", err)
-	}
-	// Get cluster info
-	res, err := es.Info()
-	if err != nil {
-		log.Fatalf("Error getting response: %s", err)
-	}
-	defer res.Body.Close()
-	// Check response status
-	if res.IsError() {
-		log.Fatalf("Error: %s", res.String())
 	}
 
 	// Build the request body.
@@ -58,8 +53,9 @@ func (repository *PokemonRepository) SearchByPokemonName(searchWord string) (jso
 	if err := json.NewEncoder(&buf).Encode(query); err != nil {
 		log.Fatalf("Error encoding query: %s", err)
 	}
+
 	// Perform the search request.
-	res, err = es.Search(
+	res, err := es.Search(
 		es.Search.WithContext(context.Background()),
 		es.Search.WithIndex("pokemon"),
 		es.Search.WithBody(&buf),
