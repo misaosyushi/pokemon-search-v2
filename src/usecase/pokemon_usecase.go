@@ -27,6 +27,7 @@ func SearchByPokemonName(searchWord string) string {
 }
 
 func makeMessage(dto dto.PokemonDto) string {
-	return fmt.Sprintf("【タイプ】\n%s\n【種族値】\nHP　　  : %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s",
-		dto.Type, dto.BaseStats.Hp, dto.BaseStats.Attack, dto.BaseStats.Defense, dto.BaseStats.SpecialAttack, dto.BaseStats.SpecialDefense, dto.BaseStats.Speed)
+	// TODO: 特性の複数対応
+	return fmt.Sprintf("【タイプ】\n%s\n【種族値】\nHP　　  : %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s\n【特性】\n%s\n【夢特性】\n%s",
+		dto.Types, dto.Stats.Hp, dto.Stats.Attack, dto.Stats.Defense, dto.Stats.SpAttack, dto.Stats.SpDefense, dto.Stats.Speed, dto.Abilities[0].Name, dto.HiddenAbilities[0].Name)
 }

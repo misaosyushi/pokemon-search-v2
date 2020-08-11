@@ -1,6 +1,6 @@
 {"index":{}}
-{"name":"サルノリ","type":"くさ","baseStats":{"hp":"50","attack":"65","defense": "50","specialAttack": "40","specialDefense": "40","speed": "65"}}
+{"name":"サルノリ","types":"くさ","stats":{"hp":"50","attack":"65","defense": "50","spAttack": "40","spDefense": "40","speed": "65"},"abilities":[{"name":"しんりょく","detail":""}],"hiddenAbilities":[{"name":"グラスメイカー","detail":""}]}
 {"index":{}}
-{"name":"ヒバニー","type":"ほのお","baseStats":{"hp":"50","attack":"71","defense": "40","specialAttack": "40","specialDefense": "40","speed": "69"}}
+{"name":"ヒバニー","types":"ほのお","stats":{"hp":"50","attack":"71","defense": "40","spAttack": "40","spDefense": "40","speed": "69"},"abilities":[{"name":"もうか","detail":""}],"hiddenAbilities":[{"name":"リベロ","detail":""}]}
 {"index":{}}
-{"name":"メッソン","type":"みず","baseStats":{"hp":"50","attack":"40","defense": "40","specialAttack": "70","specialDefense": "40","speed": "70"}}
+{"name":"メッソン","types":"みず","stats":{"hp":"50","attack":"40","defense": "40","spAttack": "70","spDefense": "40","speed": "70"},"abilities":[{"name":"げきりゅう","detail":""}],"hiddenAbilities":[{"name":"スナイパー","detail":""}]}
