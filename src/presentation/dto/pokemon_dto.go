@@ -8,7 +8,7 @@ type PokemonDto struct {
 		Attack    string `json:"attack"`
 		Defense   string `json:"defense"`
 		SpAttack  string `json:"spAttack"`
-		SpDefense string `json:"spDefence"`
+		SpDefense string `json:"spDefense"`
 		Speed     string `json:"speed"`
 	} `json:"stats"`
 	Abilities       []Ability `json:"abilities"`
