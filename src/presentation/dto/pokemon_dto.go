@@ -1,8 +1,8 @@
 package dto
 
 type PokemonDto struct {
-	Name  string `json:"name"`
-	Types string `json:"types"`
+	Name  string   `json:"name"`
+	Types []string `json:"types"`
 	Stats struct {
 		Hp        string `json:"hp"`
 		Attack    string `json:"attack"`

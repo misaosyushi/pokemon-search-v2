@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"strings"
 
 	"github.com/pokemon-search-v2/src/infrastructure/elasticsearch"
 	"github.com/pokemon-search-v2/src/presentation/dto"
@@ -27,7 +28,24 @@ func SearchByPokemonName(searchWord string) string {
 }
 
 func makeMessage(dto dto.PokemonDto) string {
-	// TODO: 特性の複数対応
+	types := strings.Join(dto.Types, " ")
+	var abilities = ""
+	var hiddenAbilities = ""
+
+	for i, ability := range dto.Abilities {
+		if i+1 == len(dto.Abilities) {
+			abilities += ability.Name
+			break
+		}
+		abilities += ability.Name + "\n"
+	}
+	for i, hiddenAbility := range dto.HiddenAbilities {
+		if i+1 == len(dto.HiddenAbilities) {
+			hiddenAbilities += hiddenAbility.Name
+			break
+		}
+		hiddenAbilities += hiddenAbility.Name + "\n"
+	}
 	return fmt.Sprintf("【タイプ】\n%s\n【種族値】\nHP　　  : %s\nこうげき: %s\nぼうぎょ: %s\nとっこう: %s\nとくぼう: %s\nすばやさ: %s\n【特性】\n%s\n【夢特性】\n%s",
-		dto.Types, dto.Stats.Hp, dto.Stats.Attack, dto.Stats.Defense, dto.Stats.SpAttack, dto.Stats.SpDefense, dto.Stats.Speed, dto.Abilities[0].Name, dto.HiddenAbilities[0].Name)
+		types, dto.Stats.Hp, dto.Stats.Attack, dto.Stats.Defense, dto.Stats.SpAttack, dto.Stats.SpDefense, dto.Stats.Speed, abilities, hiddenAbilities)
 }
