@@ -22,7 +22,7 @@ func SearchByPokemonName(searchWord string) string {
 
 	var pokemonDto dto.PokemonDto
 	if err := json.Unmarshal(bytes, &pokemonDto); err != nil {
-		log.Fatal("Failed to parse json to DTO.")
+		fmt.Errorf("Failed to parse json to DTO: %s", err)
 	}
 	return makeMessage(pokemonDto)
 }

@@ -1,7 +1,7 @@
 package line
 
 import (
-	"log"
+	"fmt"
 	"os"
 
 	"github.com/line/line-bot-sdk-go/linebot"
@@ -19,9 +19,9 @@ func NewLineRepository() repository.ILineRepository {
 func (repository *LineRepository) ReplayMessage(dto *dto.LineMessageDto, message string) {
 	bot, err := linebot.New(os.Getenv("CHANNEL_SECRET"), os.Getenv("CHANNEL_ACCESS_TOKEN"))
 	if err != nil {
-		log.Fatalf("Failed to create line client: %s", err)
+		fmt.Errorf("failed to create line client: %s", err)
 	}
 	if _, err := bot.ReplyMessage(dto.Events[0].ReplyToken, linebot.NewTextMessage(message)).Do(); err != nil {
-		log.Printf("Failed to reply message: %s", err)
+		fmt.Errorf("failed to reply message: %s", err)
 	}
 }
