@@ -1,6 +1,110 @@
 {"index":{}}
-{"name":"サルノリ","types":"くさ","stats":{"hp":"50","attack":"65","defense": "50","spAttack": "40","spDefense": "40","speed": "65"},"abilities":[{"name":"しんりょく","detail":""}],"hiddenAbilities":[{"name":"グラスメイカー","detail":""}]}
+{"name":"サルノリ","types":["くさ"],"stats":{"hp":"50","attack":"65","defense": "50","spAttack": "40","spDefense": "40","speed": "65"},"abilities":[{"name":"しんりょく","detail":""}],"hiddenAbilities":[{"name":"グラスメイカー","detail":""}]}
 {"index":{}}
-{"name":"ヒバニー","types":"ほのお","stats":{"hp":"50","attack":"71","defense": "40","spAttack": "40","spDefense": "40","speed": "69"},"abilities":[{"name":"もうか","detail":""}],"hiddenAbilities":[{"name":"リベロ","detail":""}]}
+{"name":"バチンキー","types":["くさ"],"stats":{"hp":"70","attack":"85","defense": "70","spAttack": "55","spDefense": "60","speed": "80"},"abilities":[{"name":"しんりょく","detail":""}],"hiddenAbilities":[{"name":"グラスメイカー","detail":""}]}
 {"index":{}}
-{"name":"メッソン","types":"みず","stats":{"hp":"50","attack":"40","defense": "40","spAttack": "70","spDefense": "40","speed": "70"},"abilities":[{"name":"げきりゅう","detail":""}],"hiddenAbilities":[{"name":"スナイパー","detail":""}]}
+{"name":"ゴリランダー","types":["くさ"],"stats":{"hp":"100","attack":"125","defense": "90","spAttack": "60","spDefense": "70","speed": "85"},"abilities":[{"name":"しんりょく","detail":""}],"hiddenAbilities":[{"name":"グラスメイカー","detail":""}]}
+{"index":{}}
+{"name":"ヒバニー","types":["ほのお"],"stats":{"hp":"50","attack":"71","defense": "40","spAttack": "40","spDefense": "40","speed": "69"},"abilities":[{"name":"もうか","detail":""}],"hiddenAbilities":[{"name":"リベロ","detail":""}]}
+{"index":{}}
+{"name":"ラビフット","types":["ほのお"],"stats":{"hp":"65","attack":"86","defense": "60","spAttack": "55","spDefense": "60","speed": "94"},"abilities":[{"name":"もうか","detail":""}],"hiddenAbilities":[{"name":"リベロ","detail":""}]}
+{"index":{}}
+{"name":"エースバーン","types":["ほのお"],"stats":{"hp":"80","attack":"116","defense": "75","spAttack": "65","spDefense": "75","speed": "119"},"abilities":[{"name":"もうか","detail":""}],"hiddenAbilities":[{"name":"リベロ","detail":""}]}
+{"index":{}}
+{"name":"メッソン","types":["みず"],"stats":{"hp":"50","attack":"40","defense": "40","spAttack": "70","spDefense": "40","speed": "70"},"abilities":[{"name":"げきりゅう","detail":""}],"hiddenAbilities":[{"name":"スナイパー","detail":""}]}
+{"index":{}}
+{"name":"ジメレオン","types":["みず"],"stats":{"hp":"65","attack":"60","defense": "55","spAttack": "95","spDefense": "55","speed": "90"},"abilities":[{"name":"げきりゅう","detail":""}],"hiddenAbilities":[{"name":"スナイパー","detail":""}]}
+{"index":{}}
+{"name":"インテレオン","types":["みず"],"stats":{"hp":"70","attack":"85","defense": "65","spAttack": "125","spDefense": "65","speed": "120"},"abilities":[{"name":"げきりゅう","detail":""}],"hiddenAbilities":[{"name":"スナイパー","detail":""}]}
+{"index":{}}
+{"name":"サッチムシ","types":["むし"],"stats":{"hp":"25","attack":"20","defense": "20","spAttack": "25","spDefense": "45","speed": "45"},"abilities":[{"name":"むしのしらせ","detail":""},{"name":"ふくがん","detail":""}],"hiddenAbilities":[{"name":"テレパシー","detail":""}]}
+{"index":{}}
+{"name":"レドームシ","types":["むし","エスパー"],"stats":{"hp":"50","attack":"35","defense": "80","spAttack": "50","spDefense": "90","speed": "30"},"abilities":[{"name":"むしのしらせ","detail":""},{"name":"ふくがん","detail":""}],"hiddenAbilities":[{"name":"テレパシー","detail":""}]}
+{"index":{}}
+{"name":"イオルブ","types":["むし","エスパー"],"stats":{"hp":"60","attack":"45","defense": "110","spAttack": "80","spDefense": "120","speed": "90"},"abilities":[{"name":"むしのしらせ","detail":""},{"name":"おみとおし","detail":""}],"hiddenAbilities":[{"name":"テレパシー","detail":""}]}
+{"index":{}}
+{"name":"ココガラ","types":["ひこう"],"stats":{"hp":"38","attack":"47","defense": "35","spAttack": "33","spDefense": "35","speed": "57"},"abilities":[{"name":"するどいめ","detail":""},{"name":"きんちょうかん","detail":""}],"hiddenAbilities":[{"name":"はとむね","detail":""}]}
+{"index":{}}
+{"name":"アオガラス","types":["ひこう"],"stats":{"hp":"68","attack":"67","defense": "55","spAttack": "43","spDefense": "55","speed": "77"},"abilities":[{"name":"するどいめ","detail":""},{"name":"きんちょうかん","detail":""}],"hiddenAbilities":[{"name":"はとむね","detail":""}]}
+{"index":{}}
+{"name":"アーマーガア","types":["ひこう","はがね"],"stats":{"hp":"98","attack":"87","defense": "105","spAttack": "53","spDefense": "85","speed": "67"},"abilities":[{"name":"プレッシャー","detail":""},{"name":"きんちょうかん","detail":""}],"hiddenAbilities":[{"name":"ミラーアーマー","detail":""}]}
+{"index":{}}
+{"name":"ホシガリス","types":["ノーマル"],"stats":{"hp":"70","attack":"55","defense": "55","spAttack": "35","spDefense": "35","speed": "25"},"abilities":[{"name":"ほおぶくろ","detail":""}],"hiddenAbilities":[{"name":"くいしんぼう","detail":""}]}
+{"index":{}}
+{"name":"ヨクバリス","types":["ノーマル"],"stats":{"hp":"120","attack":"95","defense": "95","spAttack": "55","spDefense": "75","speed": "20"},"abilities":[{"name":"ほおぶくろ","detail":""}],"hiddenAbilities":[{"name":"くいしんぼう","detail":""}]}
+{"index":{}}
+{"name":"クスネ","types":["あく"],"stats":{"hp":"40","attack":"28","defense": "28","spAttack": "47","spDefense": "52","speed": "50"},"abilities":[{"name":"にげあし","detail":""},{"name":"かるわざ","detail":""}],"hiddenAbilities":[{"name":"はりこみ","detail":""}]}
+{"index":{}}
+{"name":"フォスクライ","types":["あく"],"stats":{"hp":"70","attack":"58","defense": "58","spAttack": "87","spDefense": "92","speed": "90"},"abilities":[{"name":"にげあし","detail":""},{"name":"かるわざ","detail":""}],"hiddenAbilities":[{"name":"はりこみ","detail":""}]}
+{"index":{}}
+{"name":"タチフサグマ","types":["あく","ノーマル"],"stats":{"hp":"93","attack":"90","defense":"101","spAttack":"60","spDefense":"81","speed":"95"},"abilities":[{"name":"すてみ","detail":""},{"name":"こんじょう","detail":""}],"hiddenAbilities":[{"name":"まけんき","detail":""}]}
+{"index":{}}
+{"name":"ウールー","types":["ノーマル"],"stats":{"hp":"42","attack":"40","defense":"55","spAttack":"40","spDefense":"45","speed":"48"},"abilities":[{"name":"もふもふ","detail":""},{"name":"にげあし","detail":""}],"hiddenAbilities":[{"name":"ぼうだん","detail":""}]}
+{"index":{}}
+{"name":"バイウールー","types":["ノーマル"],"stats":{"hp":"72","attack":"80","defense":"100","spAttack":"60","spDefense":"90","speed":"88"},"abilities":[{"name":"もふもふ","detail":""},{"name":"ふくつのこころ","detail":""}],"hiddenAbilities":[{"name":"ぼうだん","detail":""}]}
+{"index":{}}
+{"name":"カムカメ","types":["みず"],"stats":{"hp":"50","attack":"64","defense":"50","spAttack":"38","spDefense":"38","speed":"44"},"abilities":[{"name":"がんじょうあご","detail":""},{"name":"シェルアーマー","detail":""}],"hiddenAbilities":[{"name":"すいすい","detail":""}]}
+{"index":{}}
+{"name":"カジリガメ","types":["みず","いわ"],"stats":{"hp":"90","attack":"115","defense":"90","spAttack":"48","spDefense":"68","speed":"74"},"abilities":[{"name":"がんじょうあご","detail":""},{"name":"シェルアーマー","detail":""}],"hiddenAbilities":[{"name":"すいすい","detail":""}]}
+{"index":{}}
+{"name":"ワンパチ","types":["でんき"],"stats":{"hp":"59","attack":"45","defense":"50","spAttack":"40","spDefense":"50","speed":"26"},"abilities":[{"name":"たまひろい","detail":""}],"hiddenAbilities":[{"name":"びびり","detail":""}]}
+{"index":{}}
+{"name":"パルスワン","types":["でんき"],"stats":{"hp":"69","attack":"90","defense":"60","spAttack":"90","spDefense":"60","speed":"121"},"abilities":[{"name":"がんじょうあご","detail":""}],"hiddenAbilities":[{"name":"かちき","detail":""}]}
+{"index":{}}
+{"name":"ヒメンカ","types":["くさ"],"stats":{"hp":"40","attack":"40","defense":"60","spAttack":"40","spDefense":"60","speed":"10"},"abilities":[{"name":"わたげ","detail":""},{"name":"さいせいりょく","detail":""}],"hiddenAbilities":[{"name":"ほうし","detail":""}]}
+{"index":{}}
+{"name":"ワタシラガ","types":["くさ"],"stats":{"hp":"60","attack":"50","defense":"90","spAttack":"80","spDefense":"120","speed":"60"},"abilities":[{"name":"わたげ","detail":""},{"name":"さいせいりょく","detail":""}],"hiddenAbilities":[{"name":"ほうし","detail":""}]}
+{"index":{}}
+{"name":"ヤクデ","types":["ほのお","むし"],"stats":{"hp":"50","attack":"65","defense":"45","spAttack":"50","spDefense":"50","speed":"45"},"abilities":[{"name":"もらいび","detail":""},{"name":"しろいけむり","detail":""}],"hiddenAbilities":[{"name":"ほのおのからだ","detail":""}]}
+{"index":{}}
+{"name":"マルヤクデ","types":["ほのお","むし"],"stats":{"hp":"100","attack":"115","defense":"65","spAttack":"90","spDefense":"90","speed":"65"},"abilities":[{"name":"もらいび","detail":""},{"name":"しろいけむり","detail":""}],"hiddenAbilities":[{"name":"ほのおのからだ","detail":""}]}
+{"index":{}}
+{"name":"タンドン","types":["いわ"],"stats":{"hp":"30","attack":"40","defense":"50","spAttack":"40","spDefense":"50","speed":"30"},"abilities":[{"name":"じょうききかん","detail":""},{"name":"たいねつ","detail":""}],"hiddenAbilities":[{"name":"もらいび","detail":""}]}
+{"index":{}}
+{"name":"トロッゴン","types":["いわ","ほのお"],"stats":{"hp":"80","attack":"60","defense":"90","spAttack":"60","spDefense":"70","speed":"50"},"abilities":[{"name":"じょうききかん","detail":""},{"name":"ほのおのからだ","detail":""}],"hiddenAbilities":[{"name":"もらいび","detail":""}]}
+{"index":{}}
+{"name":"セキタンザン","types":["いわ","ほのお"],"stats":{"hp":"110","attack":"80","defense":"120","spAttack":"80","spDefense":"90","speed":"30"},"abilities":[{"name":"じょうききかん","detail":""},{"name":"ほのおのからだ","detail":""}],"hiddenAbilities":[{"name":"もらいび","detail":""}]}
+{"index":{}}
+{"name":"サシカマス","types":["みず"],"stats":{"hp":"41","attack":"63","defense":"40","spAttack":"40","spDefense":"30","speed":"66"},"abilities":[{"name":"すいすい","detail":""}],"hiddenAbilities":[{"name":"スクリューおびれ","detail":""}]}
+{"index":{}}
+{"name":"カマスジョー","types":["みず"],"stats":{"hp":"61","attack":"123","defense":"60","spAttack":"60","spDefense":"50","speed":"136"},"abilities":[{"name":"すいすい","detail":""}],"hiddenAbilities":[{"name":"スクリューおびれ","detail":""}]}
+{"index":{}}
+{"name":"ニャイキング","types":["はがね"],"stats":{"hp":"70","attack":"110","defense":"100","spAttack":"50","spDefense":"60","speed":"50"},"abilities":[{"name":"カブトアーマー","detail":""},{"name":"かたいツメ","detail":""}],"hiddenAbilities":[{"name":"はがねのせいしん","detail":""}]}
+{"index":{}}
+{"name":"マホミル","types":["フェアリー"],"stats":{"hp":"45","attack":"40","defense":"40","spAttack":"50","spDefense":"61","speed":"34"},"abilities":[{"name":"スイートベール","detail":""}],"hiddenAbilities":[{"name":"アロマベール","detail":""}]}
+{"index":{}}
+{"name":"マホイップ","types":["フェアリー"],"stats":{"hp":"65","attack":"60","defense":"75","spAttack":"110","spDefense":"121","speed":"64"},"abilities":[{"name":"スイートベール","detail":""}],"hiddenAbilities":[{"name":"アロマベール","detail":""}]}
+{"index":{}}
+{"name":"カジッチュ","types":["くさ","ドラゴン"],"stats":{"hp":"40","attack":"40","defense":"80","spAttack":"40","spDefense":"40","speed":"20"},"abilities":[{"name":"じゅくせい","detail":""},{"name":"くいしんぼう","detail":""}],"hiddenAbilities":[{"name":"ぼうだん","detail":""}]}
+{"index":{}}
+{"name":"アップリュー","types":["くさ","ドラゴン"],"stats":{"hp":"70","attack":"110","defense":"80","spAttack":"95","spDefense":"60","speed":"70"},"abilities":[{"name":"じゅくせい","detail":""},{"name":"くいしんぼう","detail":""}],"hiddenAbilities":[{"name":"はりきり","detail":""}]}
+{"index":{}}
+{"name":"タルップル","types":["くさ","ドラゴン"],"stats":{"hp":"110","attack":"85","defense":"80","spAttack":"100","spDefense":"80","speed":"30"},"abilities":[{"name":"じゅくせい","detail":""},{"name":"くいしんぼう","detail":""}],"hiddenAbilities":[{"name":"あついしぼう","detail":""}]}
+{"index":{}}
+{"name":"ネギガナイト","types":["かくとう"],"stats":{"hp":"62","attack":"135","defense":"95","spAttack":"68","spDefense":"82","speed":"65"},"abilities":[{"name":"ふくつのこころ","detail":""}],"hiddenAbilities":[{"name":"きもったま","detail":""}]}
+{"index":{}}
+{"name":"サニゴーン","types":["ゴースト"],"stats":{"hp":"60","attack":"95","defense":"50","spAttack":"145","spDefense":"130","speed":"30"},"abilities":[{"name":"くだけるよろい","detail":""}],"hiddenAbilities":[{"name":"ほろびのボディ","detail":""}]}
+{"index":{}}
+{"name":"ベロバー","types":["あく","フェアリー"],"stats":{"hp":"45","attack":"45","defense":"30","spAttack":"55","spDefense":"40","speed":"50"},"abilities":[{"name":"いたずらごころ","detail":""},{"name":"おみとおし","detail":""}],"hiddenAbilities":[{"name":"わるいてぐせ","detail":""}]}
+{"index":{}}
+{"name":"ギモー","types":["あく","フェアリー"],"stats":{"hp":"65","attack":"60","defense":"45","spAttack":"75","spDefense":"55","speed":"70"},"abilities":[{"name":"いたずらごころ","detail":""},{"name":"おみとおし","detail":""}],"hiddenAbilities":[{"name":"わるいてぐせ","detail":""}]}
+{"index":{}}
+{"name":"オーロンゲ","types":["あく","フェアリー"],"stats":{"hp":"95","attack":"120","defense":"65","spAttack":"95","spDefense":"75","speed":"60"},"abilities":[{"name":"いたずらごころ","detail":""},{"name":"おみとおし","detail":""}],"hiddenAbilities":[{"name":"わるいてぐせ","detail":""}]}
+{"index":{}}
+{"name":"ミブリム","types":["エスパー"],"stats":{"hp":"42","attack":"30","defense":"45","spAttack":"56","spDefense":"53","speed":"39"},"abilities":[{"name":"いやしのこころ","detail":""},{"name":"きけんよち","detail":""}],"hiddenAbilities":[{"name":"マジックミラー","detail":""}]}
+{"index":{}}
+{"name":"テブリム","types":["エスパー"],"stats":{"hp":"57","attack":"40","defense":"65","spAttack":"86","spDefense":"73","speed":"49"},"abilities":[{"name":"いやしのこころ","detail":""},{"name":"きけんよち","detail":""}],"hiddenAbilities":[{"name":"マジックミラー","detail":""}]}
+{"index":{}}
+{"name":"ブリムオン","types":["エスパー","フェアリー"],"stats":{"hp":"57","attack":"90","defense":"95","spAttack":"136","spDefense":"103","speed":"29"},"abilities":[{"name":"いやしのこころ","detail":""},{"name":"きけんよち","detail":""}],"hiddenAbilities":[{"name":"マジックミラー","detail":""}]}
+{"index":{}}
+{"name":"ゾウドウ","types":["はがね"],"stats":{"hp":"72","attack":"80","defense":"49","spAttack":"40","spDefense":"49","speed":"40"},"abilities":[{"name":"ちからずく","detail":""}],"hiddenAbilities":[{"name":"ヘヴィメタル","detail":""}]}
+{"index":{}}
+{"name":"ダイオウドウ","types":["はがね"],"stats":{"hp":"122","attack":"130","defense":"69","spAttack":"80","spDefense":"69","speed":"30"},"abilities":[{"name":"ちからずく","detail":""}],"hiddenAbilities":[{"name":"ヘヴィメタル","detail":""}]}
+{"index":{}}
+{"name":"ウッウ","types":["ひこう","みず"],"stats":{"hp":"70","attack":"85","defense":"55","spAttack":"85","spDefense":"95","speed":"85"},"abilities":[{"name":"うのミサイル","detail":""}],"hiddenAbilities":[{"name":"","detail":""}]}
+{"index":{}}
+{"name":"ストリンダー","types":["でんき","どく"],"stats":{"hp":"75","attack":"98","defense":"70","spAttack":"114","spDefense":"70","speed":"75"},"abilities":[{"name":"パンクロック","detail":""},{"name":"プラス","detail":""}],"hiddenAbilities":[{"name":"テクニシャン","detail":""}]}
+{"index":{}}
+{"name":"スナヘビ","types":["じめん"],"stats":{"hp":"52","attack":"57","defense":"75","spAttack":"35","spDefense":"50","speed":"46"},"abilities":[{"name":"すなはき","detail":""},{"name":"だっぴ","detail":""}],"hiddenAbilities":[{"name":"すながくれ","detail":""}]}
+{"index":{}}
+{"name":"サダイジャ","types":["じめん"],"stats":{"hp":"72","attack":"107","defense":"125","spAttack":"65","spDefense":"70","speed":"71"},"abilities":[{"name":"すなはき","detail":""},{"name":"だっぴ","detail":""}],"hiddenAbilities":[{"name":"すながくれ","detail":""}]}
